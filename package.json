@@ -1,0 +1,20 @@
+{
+  "name": "watchstore",
+  "version": "1.0.0",
+  "description": "Tienda online de relojes/smartwatches - arquitectura preparada para producción",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "migrate": "node backend/src/db/migrate.js",
+    "seed": "node backend/src/db/seed.js",
+    "db:reset": "npm run migrate && npm run seed",
+    "start": "node backend/src/server.js",
+    "dev": "node --watch backend/src/server.js",
+    "test": "node --test tests/*.test.js",
+    "lint": "find backend frontend/public/js admin/public/js tests -name '*.js' -print0 | xargs -0 -n1 node --check"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

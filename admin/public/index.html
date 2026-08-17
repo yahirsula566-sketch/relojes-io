@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Admin Chronos</title>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="logo">Chronos<span class="dot">.</span></div>
+    <a href="index.html" class="active">📊 Dashboard</a>
+    <a href="productos.html">⌚ Productos</a>
+    <a href="pedidos.html">📦 Pedidos</a>
+    <div class="divider"></div>
+    <a href="/index.html" target="_blank">🔗 Ver tienda</a>
+    <a href="#" id="logout-link">🚪 Cerrar sesión</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>Dashboard</h1>
+      <button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><span data-theme-icon>🌙</span></button>
+    </div>
+    <div id="dashboard-root"><div class="loading-row"><span class="spinner"></span> Cargando…</div></div>
+  </main>
+</div>
+
+<script type="module" src="js/layout.js"></script>
+<script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

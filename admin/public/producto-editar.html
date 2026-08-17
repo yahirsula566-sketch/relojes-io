@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editar producto — Admin Chronos</title>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="logo">Chronos<span class="dot">.</span></div>
+    <a href="index.html">📊 Dashboard</a>
+    <a href="productos.html" class="active">⌚ Productos</a>
+    <a href="pedidos.html">📦 Pedidos</a>
+    <div class="divider"></div>
+    <a href="/index.html" target="_blank">🔗 Ver tienda</a>
+    <a href="#" id="logout-link">🚪 Cerrar sesión</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1 id="page-title">Nuevo producto</h1>
+      <button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><span data-theme-icon>🌙</span></button>
+    </div>
+
+    <div class="panel">
+      <h3>Datos generales</h3>
+      <div id="product-alert"></div>
+      <form id="product-form">
+        <div class="form-grid">
+          <div class="field"><label>Nombre</label><input name="name" required></div>
+          <div class="field"><label>Precio base (Q)</label><input name="basePrice" type="number" step="0.01" min="0" required></div>
+        </div>
+        <div class="field"><label>Descripción</label><textarea name="description" rows="3"></textarea></div>
+        <div class="form-grid">
+          <div class="field"><label>Categoría</label><select name="categoryId" id="category-select"></select></div>
+          <div class="field" style="justify-content:center;">
+            <label class="filter-option"><input type="checkbox" name="active" checked> Producto activo</label>
+            <label class="filter-option"><input type="checkbox" name="featured"> Destacado</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="save-product-btn">Guardar producto</button>
+      </form>
+    </div>
+
+    <div id="variants-section" style="display:none;">
+      <div class="panel">
+        <h3>Imagen principal del producto</h3>
+        <p style="font-size:.86rem;">Esta imagen se usa como respaldo cuando una variante no tiene su propia foto. Si no subes ninguna, se genera automáticamente una ilustración.</p>
+        <div id="product-images-root" style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px;"></div>
+        <label class="btn btn-outline btn-sm" style="display:inline-flex;">
+          📷 Subir imagen
+          <input type="file" id="product-image-input" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" style="display:none;">
+        </label>
+        <span id="image-upload-status" style="font-size:.82rem;color:var(--text-muted);margin-left:10px;"></span>
+      </div>
+
+      <div class="panel">
+        <h3>Estilos y variantes</h3>
+        <p style="font-size:.86rem;">Cada estilo agrupa los colores disponibles para ese estilo. Cada color es una variante independiente con su propio SKU, precio y stock.</p>
+        <div id="styles-root"></div>
+        <form id="add-style-form" class="flex gap-8" style="margin-top:10px;">
+          <input type="text" name="styleName" placeholder="Nombre del nuevo estilo (ej. Sport)" required style="flex:1;padding:9px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);">
+          <button type="submit" class="btn btn-outline btn-sm">+ Agregar estilo</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="js/layout.js"></script>
+<script type="module" src="js/producto-editar.js"></script>
+</body>
+</html>

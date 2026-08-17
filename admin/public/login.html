@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Iniciar sesión — Chronos</title>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+<div class="login-shell">
+  <div class="login-card">
+    <div class="logo" style="margin-bottom:22px;">Chronos<span class="dot">.</span> <span style="font-size:.7rem;color:var(--text-muted);font-family:var(--font-body);">ADMIN</span></div>
+    <h2 style="margin-top:0;">Iniciar sesión</h2>
+    <p style="font-size:.88rem;">Acceso restringido al panel administrativo.</p>
+    <form id="login-form">
+      <div class="field"><label>Correo</label><input type="email" name="email" required autofocus></div>
+      <div class="field"><label>Contraseña</label><input type="password" name="password" required></div>
+      <div id="login-alert"></div>
+      <button class="btn btn-primary btn-block" type="submit" id="login-submit">Entrar</button>
+    </form>
+    <p style="font-size:.78rem;margin-top:18px;">Credenciales de ejemplo (definidas en <code>.env</code>): ver README.</p>
+    <a href="/index.html" style="font-size:.82rem;color:var(--text-muted);">← Volver a la tienda</a>
+  </div>
+</div>
+<script type="module" src="js/login.js"></script>
+</body>
+</html>
