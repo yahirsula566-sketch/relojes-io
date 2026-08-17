@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nosotros — Chronos</title>
+<link rel="stylesheet" href="/css/styles.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/index.html" class="logo">Chronos<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="/index.html">Inicio</a>
+      <a href="/catalogo.html">Catálogo</a>
+      <a href="/nosotros.html" class="active">Nosotros</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><span data-theme-icon>🌙</span></button>
+      <a class="icon-btn" href="/carrito.html" aria-label="Carrito">🛒<span class="cart-count" data-cart-count>0</span></a>
+      <button class="icon-btn" data-mobile-nav-toggle aria-label="Menú">☰</button>
+    </div>
+  </div>
+  <nav data-mobile-nav class="mobile-nav">
+    <a href="/index.html">Inicio</a><a href="/catalogo.html">Catálogo</a>
+    <a href="/nosotros.html">Nosotros</a><a href="/carrito.html">Carrito</a>
+  </nav>
+</header>
+
+<main>
+  <section class="about-hero container">
+    <div class="eyebrow" style="color:var(--accent);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;">Nuestra historia</div>
+    <h1>Hacemos relojes para quienes viven cada momento con intención.</h1>
+    <p>Chronos nació de una idea simple: el reloj que llevas puesto debería sentirse tan tuyo como tu estilo de vida. Combinamos diseño cuidado con tecnología confiable para acompañarte, sin importar el ritmo del día.</p>
+    <p class="placeholder-note">Nota: esta es una tienda de demostración. La historia, misión y datos de contacto son contenido de ejemplo (placeholder) y deben reemplazarse por información real de la empresa antes de producción.</p>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div class="section-head"><h2>Nuestra misión</h2></div>
+      <p style="max-width:70ch;">Diseñar relojes y smartwatches que combinen precisión, durabilidad y un estilo atemporal — accesibles para quienes buscan algo más que dar la hora.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Nuestros valores</h2></div>
+      <div class="values-grid">
+        <div class="value-card"><h3 style="font-size:1.1rem;">Calidad primero</h3><p>Cada modelo pasa controles de calidad antes de llegar a tus manos.</p></div>
+        <div class="value-card"><h3 style="font-size:1.1rem;">Transparencia</h3><p>Precios claros, stock real y políticas simples, sin letra pequeña.</p></div>
+        <div class="value-card"><h3 style="font-size:1.1rem;">Diseño con propósito</h3><p>Cada estilo y color existe porque encaja con una forma de vivir distinta.</p></div>
+        <div class="value-card"><h3 style="font-size:1.1rem;">Cercanía</h3><p>Un equipo real detrás de cada pedido, disponible para ayudarte.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div class="promo">
+        <div>
+          <h2>Propuesta de valor</h2>
+          <p>Variantes reales por estilo y color, stock verificado al momento de comprar, y un checkout seguro de principio a fin.</p>
+        </div>
+        <a href="/catalogo.html" class="btn btn-accent">Ver catálogo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><div class="footer-bottom">
+    <span>&copy; 2026 Chronos. Proyecto de demostración.</span>
+    <span>hola@chronos-demo.test</span>
+  </div></div>
+</footer>
+
+<script type="module" src="/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo — Chronos</title>
+<link rel="stylesheet" href="/css/styles.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/index.html" class="logo">Chronos<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="/index.html">Inicio</a>
+      <a href="/catalogo.html" class="active">Catálogo</a>
+      <a href="/nosotros.html">Nosotros</a>
+    </nav>
+    <form class="search-box" data-search-form>
+      <span>🔍</span>
+      <input type="text" id="search-input" placeholder="Buscar relojes...">
+    </form>
+    <div class="header-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><span data-theme-icon>🌙</span></button>
+      <a class="icon-btn" href="/carrito.html" aria-label="Carrito">🛒<span class="cart-count" data-cart-count>0</span></a>
+      <button class="icon-btn" data-mobile-nav-toggle aria-label="Menú">☰</button>
+    </div>
+  </div>
+  <nav data-mobile-nav class="mobile-nav">
+    <a href="/index.html">Inicio</a>
+    <a href="/catalogo.html">Catálogo</a>
+    <a href="/nosotros.html">Nosotros</a>
+    <a href="/carrito.html">Carrito</a>
+  </nav>
+</header>
+
+<main class="container section">
+  <div class="section-head"><h2 id="catalog-title">Catálogo</h2></div>
+
+  <div class="catalog-layout">
+    <aside class="filters">
+      <h4>Categoría</h4>
+      <div id="filter-categories"></div>
+
+      <h4>Precio (Q)</h4>
+      <div class="price-range">
+        <input type="number" id="filter-min" placeholder="Mín" min="0">
+        <span>—</span>
+        <input type="number" id="filter-max" placeholder="Máx" min="0">
+      </div>
+
+      <h4>Disponibilidad</h4>
+      <label class="filter-option"><input type="checkbox" id="filter-featured"> Solo destacados</label>
+
+      <button class="btn btn-outline btn-block btn-sm" id="apply-filters" style="margin-top:18px;">Aplicar filtros</button>
+      <button class="btn btn-sm" id="clear-filters" style="margin-top:8px;background:transparent;color:var(--text-muted);">Limpiar</button>
+    </aside>
+
+    <div>
+      <div class="toolbar">
+        <span id="result-count" style="color:var(--text-muted);font-size:.9rem;"></span>
+        <select id="sort-select">
+          <option value="">Más recientes</option>
+          <option value="featured">Destacados primero</option>
+          <option value="price_asc">Precio: menor a mayor</option>
+          <option value="price_desc">Precio: mayor a menor</option>
+          <option value="name">Nombre A-Z</option>
+        </select>
+      </div>
+      <div id="product-grid" class="product-grid">
+        <div class="loading-row"><span class="spinner"></span> Cargando productos…</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 Chronos. Proyecto de demostración.</span>
+      <a href="/nosotros.html">Nosotros</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/js/nav.js"></script>
+<script type="module" src="/js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIGI</title>
+<meta name="description" content="Tienda especializada en relojes y smartwatches: estilo, precisión y tecnología.">
+<link rel="stylesheet" href="/css/styles.css">
+<script>document.documentElement.setAttribute('data-theme', localStorage.getItem('watchstore_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container bar">
+    <a href="/index.html" class="logo">BIGI<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="/index.html" class="active">Inicio</a>
+      <a href="/catalogo.html">Catálogo</a>
+      <a href="/nosotros.html">Nosotros</a>
+    </nav>
+    <form class="search-box" data-search-form>
+      <span>🔍</span>
+      <input type="text" placeholder="Buscar relojes...">
+    </form>
+    <div class="header-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Cambiar tema"><span data-theme-icon>🌙</span></button>
+      <a class="icon-btn" href="/carrito.html" aria-label="Carrito">🛒<span class="cart-count" data-cart-count>0</span></a>
+      <button class="icon-btn" data-mobile-nav-toggle aria-label="Menú">☰</button>
+    </div>
+  </div>
+  <nav data-mobile-nav class="mobile-nav">
+    <a href="/index.html">Inicio</a>
+    <a href="/catalogo.html">Catálogo</a>
+    <a href="/nosotros.html">Nosotros</a>
+    <a href="/carrito.html">Carrito</a>
+  </nav>
+</header>
+
+<main>
+  <section class="container hero">
+    <div>
+      <div class="eyebrow">Nueva colección 2026</div>
+      <h1>El tiempo, diseñado para tu ritmo de vida.</h1>
+      <p>Smartwatches y relojes de estilo para quienes no se conforman con ver la hora: la viven. Elige tu estilo, tu color y hazlo tuyo.</p>
+      <div class="hero-actions">
+        <a href="/catalogo.html" class="btn btn-primary">Ver catálogo</a>
+        <a href="/catalogo.html?featured=true" class="btn btn-outline">Destacados</a>
+      </div>
+    </div>
+    <div class="hero-visual" id="hero-visual"></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Productos destacados</h2>
+        <a href="/catalogo.html?featured=true" class="btn btn-outline btn-sm">Ver todos</a>
+      </div>
+      <div id="featured-grid" class="product-grid">
+        <div class="loading-row"><span class="spinner"></span> Cargando destacados…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-muted">
+    <div class="container">
+      <div class="section-head"><h2>Categorías</h2></div>
+      <div id="category-grid" class="cat-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Por qué comprar en Chronos</h2></div>
+      <div class="benefits-grid">
+        <div class="benefit"><div class="icon">🚚</div><h4>Envío asegurado</h4><p>Empaque protegido y seguimiento de tu pedido de principio a fin.</p></div>
+        <div class="benefit"><div class="icon">🔒</div><h4>Pago seguro</h4><p>Tus datos de pago nunca se procesan ni almacenan en el navegador.</p></div>
+        <div class="benefit"><div class="icon">↩️</div><h4>Garantía</h4><p>Cobertura ante defectos de fabricación en todos los modelos.</p></div>
+        <div class="benefit"><div class="icon">🎧</div><h4>Soporte real</h4><p>Un equipo disponible para ayudarte antes y después de tu compra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="promo">
+        <div>
+          <h2>Encuentra tu estilo perfecto</h2>
+          <p>Cada modelo tiene múltiples estilos y colores disponibles. Explora las combinaciones y arma el reloj que va contigo.</p>
+        </div>
+        <a href="/catalogo.html" class="btn btn-accent">Explorar ahora</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px;">Chronos<span class="dot">.</span></div>
+        <p>Relojes y smartwatches diseñados para acompañar cada momento importante. Precisión, estilo y tecnología en una sola marca.</p>
+      </div>
+      <div><h5>Tienda</h5><ul>
+        <li><a href="/catalogo.html">Catálogo</a></li>
+        <li><a href="/catalogo.html?featured=true">Destacados</a></li>
+        <li><a href="/nosotros.html">Nosotros</a></li>
+      </ul></div>
+      <div><h5>Ayuda</h5><ul>
+        <li><a href="/carrito.html">Carrito</a></li>
+        <li><a href="/checkout.html">Checkout</a></li>
+        <li><a href="/admin/">Panel admin</a></li>
+      </ul></div>
+      <div><h5>Contacto</h5><ul>
+        <li>hola@chronos-demo.test</li>
+        <li>Ciudad de Guatemala</li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Chronos. Proyecto de demostración.</span>
+      <span>Datos de contacto y marca son de ejemplo (placeholder).</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/js/nav.js"></script>
+<script type="module" src="/js/home.js"></script>
+</body>
+</html>
